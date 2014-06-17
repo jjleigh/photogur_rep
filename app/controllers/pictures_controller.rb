@@ -4,8 +4,9 @@ class PicturesController < ApplicationController
 		@pictures = Picture.all
 	end
 
-def show
-    @picture = @pictures[params[:id].to_i]
+	def show
+		# should display one picture
+		@picture = Picture.find(params[:id])
   end
 
   def new
@@ -20,6 +21,20 @@ def show
   		render :new
   	end
   end 
+
+  def edit
+  	@picture = Picture.find(params[:id])
+  end
+
+  def update
+  	@picture = Picture.find(params[:id])
+
+  	if @picture.update_attributes(picture_params)
+  		redirect_to "/pictures/#{@picture.id}"
+  	else
+  		render :edit
+  	end
+  end
 
   private 
   def picture_params
