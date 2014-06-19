@@ -4,6 +4,11 @@
     <li><%= picture.title %></li>
   <% end %>
 </ul>
- 
+ <ul>
+ 	<% @one_month_old.each do |picture| %>
+ 	<li><%= picture.title %></li>
+ 	<% end %>
+ </ul>
+ <%= @total %>
 
 <%= link_to "New Picture", "/pictures/new" %>
