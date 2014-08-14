@@ -4,6 +4,26 @@ class PicturesController < ApplicationController
 		@most_recent_pictures = Picture.most_recent_five
     @total = Picture.created_before(1.month.ago).count
     @one_month_old = Picture.created_before(1.month.ago)
+
+
+    @pictures = [
+      {
+        :title  => "The old church on the coast of White sea",
+        :artist => "Sergey Ershov",
+        :url    => "http://monicao.s3.amazonaws.com/bitmaker/house.jpg"
+      },
+      {
+        :title  => "Sea Power",
+        :artist => "Stephen Scullion",
+        :url    => "http://monicao.s3.amazonaws.com/bitmaker/wave.jpg"
+      },
+      {
+        :title  => "Into the Poppies",
+        :artist => "John Wilhelm",
+        :url    => "http://monicao.s3.amazonaws.com/bitmaker/girl.jpg"
+      }
+    ]
+  
 	end
 
 	def show
