@@ -1,10 +1,15 @@
-/*This code handles the photogur logo*/
+
+/*This code handles the photogur logo and navigation*/
 
 .app-logo {
 	font-family:Nunito;
 	font-size: 25px;
 	padding-left: 20px;
-	color: white;
+	color: orange;
+}
+
+.sticky {
+	background-color: gray;
 }
 
 /* The code below corresponds to the show page*/
@@ -27,4 +32,10 @@
 
 .name {
 	color: white;
+}
+
+/*this code ahndles the styling for the new and edit forms*/
+
+.new-edit-form {
+	padding-top: 50px;
 }
