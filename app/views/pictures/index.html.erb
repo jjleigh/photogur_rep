@@ -1,15 +1,190 @@
-<h1>Pictures</h1>
 
-  <% @most_recent_pictures.each do |picture| %>
-    <p><%= picture.title %>, <%= picture[:artist] %></p>
-    <%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
-  <% end %>
+<div class="row">
+    <div class="large-12 columns">
+ 
+     
+ 
+      <div class="row">
+        <div class="large-12 columns">
+ 
+          <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+               
+              <li class="name">
+               	Photogur
+              </li>
+              <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+            </ul>
+         
+            <section class="top-bar-section">
+               
+              <ul class="right">
+                <li class="divider"></li>
+                <li class="has-dropdown">
+                  <a href="#">Main Item 1</a>
+                  <ul class="dropdown">
+                    <li><label>Section Name</label></li>
+                    <li class="has-dropdown">
+                      <a href="#" class="">Has Dropdown, Level 1</a>
+                      <ul class="dropdown">
+                        <li><a href="#">Dropdown Options</a></li>
+                        <li><a href="#">Dropdown Options</a></li>
+                        <li><a href="#">Level 2</a></li>
+                        <li><a href="#">Subdropdown Option</a></li>
+                        <li><a href="#">Subdropdown Option</a></li>
+                        <li><a href="#">Subdropdown Option</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Dropdown Option</a></li>
+                    <li><a href="#">Dropdown Option</a></li>
+                    <li class="divider"></li>
+                    <li><label>Section Name</label></li>
+                    <li><a href="#">Dropdown Option</a></li>
+                    <li><a href="#">Dropdown Option</a></li>
+                    <li><a href="#">Dropdown Option</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">See all →</a></li>
+                  </ul>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">Main Item 2</a></li>
+                <li class="divider"></li>
+                <li class="has-dropdown">
+                  <a href="#">Main Item 3</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Dropdown Option</a></li>
+                    <li><a href="#">Dropdown Option</a></li>
+                    <li><a href="#">Dropdown Option</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">See all →</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </section>
+          </nav>
+           
+        </div>
+      </div>
+ 
+    <div class="row">
+    	<div class="small-12 small-centered columns">
+				<h1>Pictures</h1>
+    		 		<hr/>
+    	</div>
+    </div>
 
 
- 	<% @one_month_old.each do |picture| %>
- 		<p><%= picture.title %></p>
- 	<% end %>
+      <div class="row">
+ 
+   
 
- <%= @total %><br/>
+ 
+     <!-- Here the pictures begin -->
+ 			
+      <div class="large-12 columns">
+        <div class="panel callout radius">
+          <div class="row">
+ 
+            <div class="large-4 small-6 columns">
 
-<%= link_to "New Picture", "/pictures/new" %>
+            	<% @most_recent_pictures.each do |picture| %>
+            			<%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
+            		 <div class="panel">
+    								<h5><%= picture.title %></h5>
+    								<h6 class="subheader"><%= picture[:artist] %></h6>
+    						</div>
+  						<% end %>
+
+          
+              
+            </div>
+ 
+            <div class="large-4 small-6 columns">
+
+ 							<% @one_month_old.each do |picture| %>
+ 								<%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
+ 							
+ 					
+          
+ 
+              	<div class="panel">
+                	<h5><%= picture.title %></h5>
+                	<h6 class="subheader"><%= picture[:artist] %></h6>
+              	</div>
+            	<% end %>
+            </div>
+ 
+            <div class="large-4 small-6 columns">
+              <img src="http://placehold.it/500x500&text=Thumbnail">
+ 
+              <div class="panel">
+                <h5>Item Name</h5>
+                <h6 class="subheader">$000.00</h6>
+              </div>
+            </div>
+ 
+            <div class="large-4 small-6 columns">
+              <img src="http://placehold.it/500x500&text=Thumbnail">
+ 
+              <div class="panel">
+                <h5>Item Name</h5>
+                <h6 class="subheader">$000.00</h6>
+              </div>
+            </div>
+ 
+            <div class="large-4 small-6 columns">
+              <img src="http://placehold.it/500x500&text=Thumbnail">
+ 
+              <div class="panel">
+                <h5>Item Name</h5>
+                <h6 class="subheader">$000.00</h6>
+              </div>
+            </div>
+ 
+            <div class="large-4 small-6 columns">
+              <img src="http://placehold.it/500x500&text=Thumbnail">
+ 
+              <div class="panel">
+                <h5>Item Name</h5>
+                <h6 class="subheader">$000.00</h6>
+              </div>
+            </div>
+          </div>
+ 
+     
+ 
+ 
+     
+			</div>
+        </div>
+      </div>
+ 
+ 
+     
+ 
+      <footer class="row">
+        <div class="large-12 columns"><hr/>
+          <div class="row">
+ 
+            <div class="large-6 columns">
+              <p>© Copyright no one at all. Go to town.</p>
+            </div>
+ 
+            <div class="large-6 columns">
+              <ul class="inline-list right">
+                <li><%= link_to "New Picture", "/pictures/new" %></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+              </ul>
+            </div>
+ 
+          </div>
+        </div>
+      </footer>
+ 
+     
+ 
+    </div>
+  </div>
+    
