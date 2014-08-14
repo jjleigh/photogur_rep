@@ -1,5 +1,5 @@
 Photogur::Application.routes.draw do
-  resources :users
+  resources :users, :except => [:index]
   resources :comments
 
   resources :pictures
