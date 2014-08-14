@@ -1,14 +1,15 @@
-<h1>Most recent pictures</h1>
-<ul>
+<h1>Pictures</h1>
+
   <% @most_recent_pictures.each do |picture| %>
-    <li><%= picture.title %></li>
+    <p><%= picture.title %>, <%= picture[:artist] %></p>
+    <img src="<%= picture[:url] %>">
   <% end %>
-</ul>
- <ul>
+
+
  	<% @one_month_old.each do |picture| %>
- 		<li><%= picture.title %></li>
+ 		<p><%= picture.title %></p>
  	<% end %>
- </ul>
- <%= @total %>
+
+ <%= @total %><br/>
 
 <%= link_to "New Picture", "/pictures/new" %>
