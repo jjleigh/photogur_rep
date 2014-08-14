@@ -3,4 +3,7 @@ class Picture < ActiveRecord::Base
 	scope :most_recent_five, -> { newest_first.limit(5)}
 	scope :created_before, ->(time) { where("created_at < ?", time)}
 
+	belongs_to :user
+	has_many :comments through :user
+
 end
