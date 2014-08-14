@@ -4,6 +4,6 @@ class Picture < ActiveRecord::Base
 	scope :created_before, ->(time) { where("created_at < ?", time)}
 
 	belongs_to :user
-	has_many :comments through :user
+	has_many :comments through :pictures
 
 end
