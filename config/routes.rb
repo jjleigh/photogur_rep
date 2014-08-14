@@ -1,39 +1,6 @@
 Photogur::Application.routes.draw do
-
-  get 'users/index'
-
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/destroy'
-
-  get 'comments/new'
-
-  get 'comments/create'
-
-  get 'comments/edit'
-
-  get 'comments/update'
-
-  get 'comments/destroy'
-
-  # root :to => "pictures#index"
-
-  # get 'pictures' => 'pictures#index'
-
-  # get '/pictures/new' => 'pictures#new'
-  # post '/pictures/' => 'pictures#create'
-  # get '/pictures/:id' => 'pictures#show', as: "picture"
-  
-  # get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture"
-  # patch 'pictures/:id' => "pictures#update"
-
-  # delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
+  resources :users
+  resources :comments
 
   resources :pictures
   root :to => "pictures#index"
