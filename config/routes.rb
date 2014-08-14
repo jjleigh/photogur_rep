@@ -1,5 +1,27 @@
 Photogur::Application.routes.draw do
 
+  get 'users/index'
+
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/edit'
+
+  get 'users/update'
+
+  get 'users/destroy'
+
+  get 'comments/new'
+
+  get 'comments/create'
+
+  get 'comments/edit'
+
+  get 'comments/update'
+
+  get 'comments/destroy'
+
   # root :to => "pictures#index"
 
   # get 'pictures' => 'pictures#index'
