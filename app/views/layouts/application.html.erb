@@ -12,7 +12,40 @@
   </head>
 
   <body>
-
+     <div class="row">
+        <div class="large-12 medium-centered columns">
+ 
+          <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+               
+              <li class="name">
+                Photogur
+              </li>
+              <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+            </ul>
+         
+            <section class="top-bar-section">
+               
+              <ul class="right">
+              
+       
+                <li class="divider"></li>
+                <li class="has-dropdown">
+                  <a href="#">Main Item 3</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Dropdown Option</a></li>
+                    <li><a href="#">Dropdown Option</a></li>
+                    <li><a href="#">Dropdown Option</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">See all →</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </section>
+          </nav>
+           
+        </div>
+      </div>
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
