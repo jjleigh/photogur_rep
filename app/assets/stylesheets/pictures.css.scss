@@ -26,8 +26,13 @@
 /*The code below corresponds with the index page*/
 
 .index-image {
-	width: 300px;
-	height: 193px;
+	width: 300px !important;
+	height: 193px !important;
+	
+}
+
+.index-image-panel {
+
 }
 
 .name {
