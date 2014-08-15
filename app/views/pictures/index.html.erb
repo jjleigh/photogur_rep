@@ -4,97 +4,100 @@
  
  
     <div class="row">
-    	<div class="small-12 small-centered columns">
-				<h1>Pictures</h1>
-    		 		<hr/>
+    	<div class="large-12 small-centered columns">
+				<h1 class="text-center">Pictures</h1>
+    		<hr/>
     	</div>
     </div>
 
 
-      <div class="row">
- 
-   
-
- 
-     <!-- Here the pictures begin -->
+  <!-- Here the pictures begin -->
+  <div class="row">
  			
-      <div class="large-12 columns">
-        <div class="panel callout radius">
-          <div class="row">
- 
-            <div class="large-4 small-6 columns">
+    <div class="large-12 columns">
+      <div class="panel">
 
-            	<% @pictures.each do |picture| %>
-            			<%= link_to image_tag(picture.url), "/pictures/#{picture.id}", :class => 'index-image' %>
-            		 <div class="panel">
-    								<h5><%= picture.title %></h5>
-    								<h6 class="subheader"><%= picture[:artist] %></h6>
-    						</div>
-  						<% end %>
-
+      	
+        	<div class="row">
+          	<div class="large-12 columns">
           
-              
-            </div>
- 
-            <div class="large-4 small-6 columns">
+							<ul class="large-block-grid-4">
+								<% @pictures.each do |picture| %>
+							  <li>
+							  	<%= link_to image_tag(picture.url), "/pictures/#{picture.id}", :class => 'index-image' %>
 
- 							<% @one_week_old.each do |picture| %>
- 								<%= link_to image_tag(picture.url), "/pictures/#{picture.id}",:class => 'index-image'%>
- 							
- 					
+							  	<div class="panel">
+  									<h5><%= picture.title %></h5>
+  									<h6 class="subheader"><%= picture[:artist] %></h6>
+  								</div>
+							  </li>
+							</ul>
+						</div>
+					</div>
+				<% end %>
           
- 
-              	<div class="panel">
-                	<h5><%= picture.title %></h5>
-                	<h6 class="subheader"><%= picture[:artist] %></h6>
-              	</div>
-            	<% end %>
-            </div>
- 
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/300x193&text=Thumbnail">
- 
-              <div class="panel">
-                <h5>Item Name</h5>
-                <h6 class="subheader">$000.00</h6>
-              </div>
-            </div>
- 
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/300x193&text=Thumbnail">
- 
-              <div class="panel">
-                <h5>Item Name</h5>
-                <h6 class="subheader">$000.00</h6>
-              </div>
-            </div>
- 
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/300x193&text=Thumbnail">
- 
-              <div class="panel">
-                <h5>Item Name</h5>
-                <h6 class="subheader">$000.00</h6>
-              </div>
-            </div>
- 
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/300x193&text=Thumbnail">
- 
-              <div class="panel">
-                <h5>Item Name</h5>
-                <h6 class="subheader">$000.00</h6>
-              </div>
+			
+
+        
+            
+
+<!-- 
+          <div class="large-4 small-6 columns">
+
+							<#% @one_week_old.each do |picture| %>
+								<%#= link_to image_tag(picture.url), "/pictures/#{picture.id}",:class => 'index-image'%>
+							
+					
+        
+
+            	<div class="panel">
+              	<h5><%#= picture.title %></h5>
+              	<h6 class="subheader"><%#= picture[:artist] %></h6>
+            	</div>
+          	<#% end %>
+          </div> -->
+
+          <!-- <div class="large-4 small-6 columns">
+            <img src="http://placehold.it/300x193&text=Thumbnail">
+
+            <div class="panel">
+              <h5>Item Name</h5>
+              <h6 class="subheader">$000.00</h6>
             </div>
           </div>
- 
-     
- 
- 
-     
-			</div>
+
+          <div class="large-4 small-6 columns">
+            <img src="http://placehold.it/300x193&text=Thumbnail">
+
+            <div class="panel">
+              <h5>Item Name</h5>
+              <h6 class="subheader">$000.00</h6>
+            </div>
+          </div>
+
+          <div class="large-4 small-6 columns">
+            <img src="http://placehold.it/300x193&text=Thumbnail">
+
+            <div class="panel">
+              <h5>Item Name</h5>
+              <h6 class="subheader">$000.00</h6>
+            </div>
+          </div>
+
+          <div class="large-4 small-6 columns">
+            <img src="http://placehold.it/300x193&text=Thumbnail">
+
+            <div class="panel">
+              <h5>Item Name</h5>
+              <h6 class="subheader">$000.00</h6>
+            </div>
+          </div>
         </div>
-      </div>
+ -->
+     
+		
+  </div>
+</div>
  
  
      
