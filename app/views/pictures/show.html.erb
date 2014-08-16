@@ -19,7 +19,11 @@
 
 			<div class="panel show-panel">
       	<p><%= @picture[:artist] %></p>
-				       	
+      	<ul class="inline-list">
+      		<li><%= link_to "Edit", edit_picture_path(@picture) %></li>
+          <li><%= link_to "Delete", @picture, :confirm => "Are you sure you want to delete this picture?", :method => :delete %></li>     	
+      	</ul>
+				 
     	</div>
 		</div>
 	</div>
@@ -27,23 +31,4 @@
 	</div>
 </div>
 
-      <footer class="row">
-        <div class="large-12 columns"><hr/>
-          <div class="row">
- 
-            <div class="large-6 columns">
-              <p>© Copyright no one at all. Go to town.</p>
-            </div>
- 
-            <div class="large-6 columns">
-              <ul class="inline-list right">
-                <li><%= link_to "New", "/pictures/new" %></li>
-                <li><%= link_to "Back to Pictures", pictures_url %></li>
-                <li><%= link_to "Edit", edit_picture_path(@picture) %></li>
-                <li><%= link_to "Delete", @picture, :confirm => "Are you sure you want to delete this picture?", :method => :delete %></li>
-              </ul>
-            </div>
- 
-          </div>
-        </div>
-			</footer>
+     
