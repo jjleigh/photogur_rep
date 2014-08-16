@@ -1,17 +1,18 @@
 class SessionsController < ApplicationController
+ skip_before_filter :require_login, only: [:index, :new, :create]
+
   def new
   end
 
   def create
-  	user =User.find_by_email(params[:email])
-
-  	if user && user.authenticate(params[:password])
-  		session[:user_id] = user.user_id
-  		redirect_to pictures_url
-  	else 
-  		flash.now[:alert] = "Invalid email or password"
-  		render :new
-  	end
+    user = User.find_by_email(params[:email])
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect_to pictures_url, :notice => "Logged in!"
+    else
+      flash.now[:alert] = "Invalid email or password"
+      render "new"
+    end
   end
 
   def destroy
