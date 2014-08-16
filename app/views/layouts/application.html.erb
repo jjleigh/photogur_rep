@@ -46,12 +46,16 @@
                   </div>
                 </div>
               </li>
-              <li class="divider"></li>
-              <li><%= link_to "Login", new_session_path%></li>
-              <li class="divider"></li>
-              <li><%= link_to "Sign up", new_user_path%></li>
+              <% if current_user %>
                 <li class="divider"></li>
-                
+                <li><%= link_to 'Profile' %></li>
+              <% else %>
+                <li class="divider"></li>
+                <li><%= link_to "Login", new_session_path%></li>
+                <li class="divider"></li>
+                <li><%= link_to "Sign up", new_user_path%></li>
+                <li class="divider"></li>
+              <% end %>
               </ul>
             </section>
           </nav>
@@ -59,6 +63,11 @@
         </div>
 
     <%= yield %>
+    <%# if current_user %>
+        <!-- Signed in as <%#= current_user.email %>. <%#= link_to "Log out", session_path("current"), :method => :delete %> -->
+      <%# else %>
+        <!-- <%#= link_to "Log in", new_session_path %> or <%#= link_to "Sign up", new_user_path %> -->
+      <%# end %>
 
     <%= javascript_include_tag "application" %>
 
