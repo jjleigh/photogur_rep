@@ -9,16 +9,30 @@
 
 .user-panel {
 	margin-top: 111px;
+
+
+		.user-image {
+			max-height: 320px;
+			max-width: 300px;
+			width: 100%;
+		}
+
+		.user-side-head {
+		padding-bottom: 12px;
+		padding-top: 15px;
+		font-family: quicksand;
+		}
+
+}
+/*This style ont he image wont work because it wont override foundation*/
+.your-photogur-images {
+	width: 100% !important;
+	height: 178px !important;
 }
 
-.user-side-head {
-	padding-bottom: 12px;
-	padding-top: 15px;
-	font-family: quicksand;
+.your-photogur-images-panel {
+
 }
 
-.user-image {
-	max-height: 320px;
-	max-width: 300px;
-	width: 100%;
-}
+
+
