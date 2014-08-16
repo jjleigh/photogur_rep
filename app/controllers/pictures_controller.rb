@@ -1,5 +1,5 @@
 class PicturesController < ApplicationController
-	
+	before_filter :require_login 
 	def index
     @pictures = Picture.all
 		@most_recent_pictures = Picture.most_recent_five
