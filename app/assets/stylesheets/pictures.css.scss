@@ -1,17 +1,20 @@
-
+body {
+		background-color: #111C29;
+}
 /*This code handles the photogur logo and navigation*/
 
 .app-logo {
 	font-family:Nunito;
 	font-size: 25px;
 	padding-left: 20px;
+	padding-top: 7px;
 	color: orange;
 
-	a:hover {
-		color:white;
-	}
+	
 }
-
+a:hover {
+		color:white;
+}
 .sticky {
 	background-color: gray;
 }
@@ -29,15 +32,24 @@
 	}
 
 /*The code below corresponds with the index page*/
-
+.index-head {
+	padding-bottom: 20px;
+	padding-top: 55px;
+	color: orange;
+	font-family:Nobile;
+	font-weight: bold;
+	font-size: 27px;
+}
 .index-image {
 	width: 300px !important;
 	height: 193px !important;
 	
 }
+.index-panel {
 
+}
 .index-image-panel {
-
+	
 }
 
 .name {
@@ -49,3 +61,4 @@
 .new-edit-form {
 	padding-top: 80px;
 }
+
