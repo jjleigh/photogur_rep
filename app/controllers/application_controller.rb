@@ -9,10 +9,10 @@ class ApplicationController < ActionController::Base
   	@current_user ||= User.find(session[:user_id]) if session[:user_id]
   end 
 
- def require_login
+ def ensure_logged_in
   	unless current_user
   		flash[:alert] = 'You must login'
-  		redirect_to new_user_path
+  		redirect_to new_session_path
   	end
   end
 
