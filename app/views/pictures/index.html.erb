@@ -19,7 +19,10 @@
           <% @pictures.each do |picture| %>
         
             <div class="large-4 small-6 columns">
-              <%= link_to image_tag(picture.url), "/pictures/#{picture.id}", :class => 'index-image' %>
+              <div class="blur-img">
+                <%= link_to image_tag(picture.url), "/pictures/#{picture.id}", :class => 'index-image' %>
+              </div>
+              
 
               <div class="panel">
                 <h5><%= picture.title %></h5>
@@ -50,7 +53,6 @@
  
             <div class="large-6 columns">
               <ul class="inline-list right">
-                <li><%= link_to "New Picture", "/pictures/new" %></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Contact</a></li>
