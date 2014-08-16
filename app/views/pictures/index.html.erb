@@ -10,26 +10,26 @@
 
   <!-- Here the pictures begin -->
   <div class="row">
- 			
+      
     <div class="large-12 columns">
       
 
       <div class="panel index-panel">
-      	<div class="row">
-      		<% @pictures.each do |picture| %>
-				
-          	<div class="large-4 small-6 columns">
-            	<%= link_to image_tag(picture.url), "/pictures/#{picture.id}", :class => 'index-image' %>
+        <div class="row">
+          <% @pictures.each do |picture| %>
+        
+            <div class="large-4 small-6 columns">
+              <%= link_to image_tag(picture.url), "/pictures/#{picture.id}", :class => 'index-image' %>
 
-            	<div class="panel">
-              	<h5><%= picture.title %></h5>
-              	<h6 class="subheader"><%= picture[:artist] %></h6>
-            	</div>
-          	</div>
+              <div class="panel">
+                <h5><%= picture.title %></h5>
+                <h6 class="subheader"><%= picture[:artist] %></h6>
+              </div>
+            </div>
           <% end %>
-      	</div>
-			</div>
-		
+        </div>
+      </div>
+    
     </div>
   </div>
  
