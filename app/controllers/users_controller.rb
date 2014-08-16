@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-  # before_filter :require_user
+  before_filter :ensure_logged_in, :only => [:edit, :create, :show, :update, :destroy]
 
-  def index
-    @users= Users.all
-  end
+  # def index
+  #   @users= Users.all
+  # end
 
   def new
     @user = User.new
