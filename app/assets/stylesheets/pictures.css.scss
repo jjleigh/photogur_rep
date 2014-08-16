@@ -6,6 +6,10 @@
 	font-size: 25px;
 	padding-left: 20px;
 	color: orange;
+
+	a:hover {
+		color:white;
+	}
 }
 
 .sticky {
@@ -14,6 +18,7 @@
 
 /* The code below corresponds to the show page*/
 .image {
+	max-width: 100%;
 	width: 800px;
 	height: 500px;
 	border: 1px solid black;
