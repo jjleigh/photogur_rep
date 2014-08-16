@@ -48,7 +48,7 @@
               </li>
               <% if current_user %>
                 <li class="divider"></li>
-                <li><%= link_to 'Profile' %></li>
+                <li><%= link_to 'Profile', user_path(current_user) %></li>
               <% else %>
                 <li class="divider"></li>
                 <li><%= link_to "Login", new_session_path%></li>
