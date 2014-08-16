@@ -1,13 +1,29 @@
-<%= form_tag sessions_path do %>
- 	<div class="field">
-    <%= label_tag :email %><br/>
-    <%= text_field_tag :email, params[:email] %>
+<div class="row">
+
+  <div class= "large-12 columns">
+    <div class="new-edit-form">
+      <h1 class="text-center">Log in</h1>
+    </div>
+    
   </div>
-  <div class="field">
-    <%= label_tag :password %><br/>
-    <%= password_field_tag :password %>
+
+  <div class="large-6 large-centered columns">
+    
+
+
+    <%= form_tag sessions_path do %>
+      <div class="field">
+        <%= label_tag :email %><br/>
+        <%= text_field_tag :email, params[:email] %>
+      </div>
+      <div class="field">
+        <%= label_tag :password %><br/>
+        <%= password_field_tag :password %>
+      </div>
+      <div class="actions">
+        <%= submit_tag "Log in" %>
+      </div>
+    <% end %>
+
   </div>
-  <div class="actions">
-  	<%= submit_tag "Log in" %>
-  </div>
-<% end %>
+</div>
