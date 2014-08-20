@@ -28,44 +28,46 @@
             <ul class="title-area">
                
               <li class="name">
-                <%= link_to "Photogur", root_path, :class => "app-logo" %>
+                <div class="logo-container">
+                  <h1 id="app-logo"><%= link_to "Photogur", root_path %></h1>
+                </div>
               </li>
-              <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+              <li class="toggle-topbar icon"><a href="#"><span>menu</span></a></li>
             </ul>
          
-          <section class="top-bar-section">
-               
+          <section class="top-bar-section right-navigation-container">
             <ul class="right">
-              <li class="divider"></li>
               <li class="has-form">
                 <div class="row collapse">
                   <div class="large-8 small-9 columns">
-                    <input type="text" placeholder="Find Stuff">
+                    <div class="search-container"> 
+                      <input type="text" placeholder="Find Stuff">
+                    </div>
                   </div>
+                  
                   <div class="large-4 small-3 columns">
                     <a href="#" class="button expand">Search</a>
-                  </div>
-                </div>
-              </li>
+                 </div>
               
+            
               <% if current_user %>
-                <li class="divider"></li>
+
                 <li><%= link_to 'Profile', user_path(current_user), :class => "links"%></li>
-                <li class="divider"></li>
                 <li><%= link_to 'Log out', log_out_path%></li>
               <% else %>
-                <li class="divider"></li>
+
                 <li><%= link_to "Login", new_session_path, :class => "links"%></li>
-                <li class="divider"></li>
+
                 <li><%= link_to "Sign up", new_user_path, :class => "links"%></li>
-                <li class="divider"></li>
+
               <% end %>
-            
-              </ul>
-            </section>
-          </nav>
-           
-        </div>
+            </div>
+          </li>
+
+        </ul>
+      </section>
+    </nav>
+  </div>
 
     <%= yield %>
     <%# if current_user %>

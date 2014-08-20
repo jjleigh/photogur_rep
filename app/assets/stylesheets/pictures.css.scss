@@ -3,23 +3,49 @@ body {
 }
 /*This code handles the photogur logo and navigation*/
 
-.app-logo {
-	font-family:Nunito;
-	font-size: 25px;
-	padding-left: 20px;
-	padding-top: 7px;
-	color: orange;
-
+#app-logo {
 	
-}
-a:hover {
-	color:white;
+	font-size: 25px;
+	padding-left: 25px;
+	padding-top: 15px;
+	color: orange !important;
 }
 
-.links{
+#app-logo > a {
+	font-family:Nunito;
+	color: orange !important;
+	font-size: 30px;
+
+}
+#app-logo a:hover {
+	color:white !important;
+}
+
+.top-bar {
+	background-color: black;
+	height: 70px;
+}
+
+.right-navigation-container  {
+	padding-right: 25px;
+	background-color: black;
+	padding-top: 15px;
+	
+	 .has-form {
+		background-color: black !important;
+		
+		.button {
+			background-color: gray;
+		}
+	}
+	.links {
 	font-family: quicksand;
 	color: orange;
+	background-color: black !important;
+	padding-top: 15px;
+	}
 }
+
 
 /* The code below corresponds to the show page*/
 .image {
