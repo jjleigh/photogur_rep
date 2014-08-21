@@ -1,12 +1,14 @@
 class PicturesController < ApplicationController
 	before_filter :ensure_logged_in, :except => [:show, :index]
-	def index
+	
+  def index
     @pictures = Picture.search(params[:search])
-    
-		@most_recent_pictures = Picture.most_recent_five
-    @total = Picture.created_before(1.month.ago).count
-    @one_week_old = Picture.created_before(1.week.ago)
-
+		filtering_params(params).each do |key, value|
+      @pictures = @products.public_send(key, value) if value.present?
+    # @pictures = Picture.most_recent_nine
+    # @Pictures = Picture.created_before(1.month.ago).count
+    # @Pictures = Picture.created_before(1.week.ago)
+    end
 	end
 
 	def show
@@ -50,6 +52,11 @@ class PicturesController < ApplicationController
   private 
   def picture_params
   	params.require(:picture).permit(:artist, :title, :url)
+  end
+
+  def filtering_params(params)
+    params.slice(:newest_first, :most_recent_nine, :created_before)
+    
   end
 
 end
