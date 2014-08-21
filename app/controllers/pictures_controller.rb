@@ -4,7 +4,7 @@ class PicturesController < ApplicationController
   def index
     @pictures = Picture.search(params[:search])
 		filtering_params(params).each do |key, value|
-      @pictures = @products.public_send(key, value) if value.present?
+      # @pictures = @pictures.public_send(key, value) if value.present?
     # @pictures = Picture.most_recent_nine
     # @Pictures = Picture.created_before(1.month.ago).count
     # @Pictures = Picture.created_before(1.week.ago)
@@ -14,6 +14,10 @@ class PicturesController < ApplicationController
 	def show
 		# should display one picture
 		@picture = Picture.find(params[:id])
+
+    if current_user
+      @comment = @picture.comments.build
+    end
   end
 
   def new

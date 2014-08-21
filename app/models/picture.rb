@@ -3,8 +3,8 @@ class Picture < ActiveRecord::Base
 	scope :most_recent_nive, -> { newest_first.limit(9)}
 	scope :created_before, ->(time) { where("created_at < ?", time)}
 
-	belongs_to :user
-	has_many :comments #through :pictures
+	has_many :users, :through => :comments
+	has_many :comments
 
 	def self.search(search)
 
