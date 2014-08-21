@@ -1,7 +1,8 @@
 class PicturesController < ApplicationController
 	before_filter :ensure_logged_in, :except => [:show, :index]
 	def index
-    @pictures = Picture.all
+    @pictures = Picture.search(params[:search])
+    
 		@most_recent_pictures = Picture.most_recent_five
     @total = Picture.created_before(1.month.ago).count
     @one_week_old = Picture.created_before(1.week.ago)
