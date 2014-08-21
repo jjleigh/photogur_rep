@@ -2,7 +2,8 @@
 
 <div class="row">
   <div class="large-6 medium-centered columns">
-    <h1>Add a picture</h1>
+    <div class="new-edit-form">
+    <h1 class ="text-center user-head">Edit picture</h1>
     <hr>
     
     <%= form_for @picture do |f|%>
@@ -23,7 +24,7 @@
       </p>
 
       <p>
-        <%= f.submit "save" %>
+        <%= f.submit "save", :class => "button" %>
       </p>
     <% end %>
   </div>
