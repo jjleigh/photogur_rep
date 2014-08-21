@@ -18,128 +18,102 @@
 
           <div class="panel user-images-panel">
 
+
+
+          
+            <% if params[:user_id] %>
+              <% @user.pictures.each do |picture| %>
+                <div class="row">
+                  <div class="large-4 small-6 columns cs-style-3">
+
+                    <figure>
+                      <div class="blur-img">
+                        <%= link_to image_tag(picture.url), "/pictures/#{picture.id}", :class => 'index-image' %>
+                      </div>
+                      
+                      <figcaption>
+                          <h5><%= picture.title %></h5>
+                          <span class="subheader"><%= picture[:artist] %></span>
+                      </figcaption>
+                    </figure>
+                    
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+
+
             <!-- all pictures on the first row -->
-            <div class="row">
+<!--             <div class="row">
           
               <div class="large-4 small-6 columns">
-
                 <div class="your-photogur-images  blur-img">
                   <img src="http://placehold.it/1000x1000&text=Thumbnail">
                 </div>
-                
-
-                <!-- <div class="panel your-photogur-images-panel">
-                  <h5>title</h5>
-                  <h6 class="subheader">artist</h6>
-                </div> -->
               </div>
 
               <div class="large-4 small-6 columns">
-
                 <div class="your-photogur-images  blur-img">
                   <img src="http://placehold.it/1000x1000&text=Thumbnail">
                 </div>
-
-                <!-- <div class="panel">
-                  <h5>title</h5>
-                  <h6 class="subheader">artist</h6>
-                </div> -->
               </div>
 
               <div class="large-4 small-6 columns">
-                
                 <div class="your-photogur-images  blur-img">
                   <img src="http://placehold.it/1000x1000&text=Thumbnail">
                 </div>
-
-                <!-- <div class="panel">
-                  <h5>title</h5>
-                  <h6 class="subheader">artist</h6>
-                </div> -->
               </div>
-            </div>
+
+            </div> -->
 
 
 
 <!-- all pictures on second row -->
-     <div class="row">
+   <!--          <div class="row">
           
               <div class="large-4 small-6 columns">
-
                 <div class="your-photogur-images  blur-img">
                   <img src="http://placehold.it/1000x1000&text=Thumbnail">
                 </div>
-                <!-- <div class="panel">
-                  <h5>title</h5>
-                  <h6 class="subheader">artist</h6>
-                </div> -->
               </div>
 
               <div class="large-4 small-6 columns">
-
                 <div class="your-photogur-images  blur-img">
                   <img src="http://placehold.it/1000x1000&text=Thumbnail">
                 </div>
-<!-- 
-                <div class="panel">
-                  <h5>title</h5>
-                  <h6 class="subheader">artist</h6>
-                </div> -->
               </div>
 
               <div class="large-4 small-6 columns">
-
                 <div class="your-photogur-images  blur-img">
                   <img src="http://placehold.it/1000x1000&text=Thumbnail">
                 </div>
-
-                <!-- <div class="panel">
-                  <h5>title</h5>
-                  <h6 class="subheader">artist</h6>
-                </div> -->
               </div>
-            </div>
+
+            </div> -->
 
 <!-- all pictures on third row -->
 
-     <div class="row">
+     <!--        <div class="row">
           
               <div class="large-4 small-6 columns">
-
                 <div class="your-photogur-images  blur-img">
                   <img src="http://placehold.it/1000x1000&text=Thumbnail">
                 </div>
-
-                <!-- <div class="panel">
-                  <h5>title</h5>
-                  <h6 class="subheader">artist</h6>
-                </div> -->
               </div>
 
               <div class="large-4 small-6 columns">
-
                 <div class="your-photogur-images  blur-img">
                   <img src="http://placehold.it/1000x1000&text=Thumbnail">
                 </div>
-
-                <!-- <div class="panel">
-                  <h5>title</h5>
-                  <h6 class="subheader">artist</h6>
-                </div> -->
               </div>
 
               <div class="large-4 small-6 columns">
-
                 <div class="your-photogur-images  blur-img">
                   <img src="http://placehold.it/1000x1000&text=Thumbnail">
                 </div>
-
-                <!-- <div class="panel">
-                  <h5>title</h5>
-                  <h6 class="subheader">artist</h6>
-                </div> -->
               </div>
-            </div>
+
+            </div> -->
 
 
           </div>
@@ -180,13 +154,6 @@
     </div>
 
 
-    
-          
-
-      
-        
-  </div>
-    
 
     
   

@@ -2,8 +2,9 @@ Photogur::Application.routes.draw do
 
   get "log_out" => "sessions#destroy", :as => "log_out"
 
-  resources :users, :except => [:index]
-  resources :comments
+  resources :users, :except => [:index] do 
+    resources :pictures, :only => [:show]
+  end 
 
   resources :pictures do
     resources :comments, :only => [:show, :new, :create, :destroy, :edit, :update]

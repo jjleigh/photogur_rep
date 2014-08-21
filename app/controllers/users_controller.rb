@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
   before_filter :ensure_logged_in, :only => [:edit, :create, :show, :update, :destroy]
 
-  # def index
-  #   @users= Users.all
-  # end
-
   def new
     @user = User.new
   end
@@ -36,6 +32,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+
+    if current_user
+      @my_pictures = @user.pictures
+      @picture = @user.pictures.build
+    end
   end
 
   def destroy
