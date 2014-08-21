@@ -36,6 +36,11 @@ body {
 		
 		.button {
 			background-color: gray;
+			color: black;
+		}
+
+		.button:hover {
+			background-color: silver;
 		}
 	}
 	.links {
