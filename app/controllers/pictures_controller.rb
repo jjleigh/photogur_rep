@@ -26,6 +26,7 @@ class PicturesController < ApplicationController
 
   def create 
   	@picture = Picture.create(picture_params)
+    @picture.user_id = current_user.id
   	if @picture.save
   		redirect_to pictures_url
   	else
