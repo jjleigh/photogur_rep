@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
 	has_many :pictures, :through => :comments
 	has_many :comments
 
-	validates_presence_of :name , :emal, :password
+	has_many :pictures
+
+	validates_presence_of :name , :email, :password
 
 end
