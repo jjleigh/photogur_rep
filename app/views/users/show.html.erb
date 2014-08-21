@@ -21,8 +21,8 @@
 
 
           
-            <% if params[:user_id] %>
-              <% @user.pictures.each do |picture| %>
+
+              <% @my_pictures.each do |picture| %>
                 <div class="row">
                   <div class="large-4 small-6 columns cs-style-3">
 
@@ -40,7 +40,7 @@
                   </div>
                 </div>
               <% end %>
-            <% end %>
+
 
 
             <!-- all pictures on the first row -->
