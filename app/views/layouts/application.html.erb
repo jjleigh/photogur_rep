@@ -38,7 +38,7 @@
           <section class="top-bar-section right-navigation-container">
             <ul class="right">
               <li class="has-form">
-                <%= form_tag pictures_path, :method => 'get' do %>
+                <%= form_tag controller:"pictures", action: "search", method: "get" do %>
                   <div class="row collapse">
                     <div class="large-8 small-9 columns">
                       <%= text_field_tag :search, params[:search], :placeholder => 'Find pictures' %>
