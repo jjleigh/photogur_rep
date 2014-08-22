@@ -7,10 +7,10 @@ Photogur::Application.routes.draw do
   end 
 
   resources :pictures do
-    collection do
-      get :search
-      post :search
-    end
+    # collection do
+    #   get :search
+    #   # post :search
+    # end
 
     resources :comments, :only => [:show, :new, :create, :destroy, :edit, :update]
   end
