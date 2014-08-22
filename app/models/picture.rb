@@ -11,8 +11,6 @@ class Picture < ActiveRecord::Base
 
 		if search
 			@pictures = Picture.where('title like ? OR artist like ?', "%#{:search}%", "%#{:search}%")
-		else
-			@pictures = Picture.all
 		end
 	end
 
