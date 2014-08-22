@@ -13,14 +13,6 @@
   </head>
 
   <body>
-    <% if flash[:notice] %>
-      <p id="notice"><%= flash[:notice] %></p>
-    <% end %>
-    <% if flash[:alert] %>
-      <p id="alert"><%= flash[:alert] %></p>
-    <% end %>
-
-    
      <div class="sticky">
 
  
@@ -38,7 +30,7 @@
           <section class="top-bar-section right-navigation-container">
             <ul class="right">
               <li class="has-form">
-                <%= form_tag controller:"pictures", action: "search", method: "get" do %>
+                <%= form_tag (pictures_path), action: "search", method: "get" do %>
                   <div class="row collapse">
                     <div class="large-8 small-9 columns">
                       <%= text_field_tag :search, params[:search], :placeholder => 'Find pictures' %>
@@ -70,6 +62,12 @@
       </section>
     </nav>
   </div>
+    <% if flash[:notice] %>
+      <p id="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:alert] %>
+      <p id="alert"><%= flash[:alert] %></p>
+    <% end %>
 
     <%= yield %>
     <%# if current_user %>
