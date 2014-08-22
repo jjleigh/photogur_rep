@@ -18,7 +18,8 @@
 			<%= image_tag @picture.url, :class => "image" %>
 
 			<div class="panel show-panel">
-      	<p><%= @picture[:artist] %></p>
+      	<p>Artist: <%= @picture[:artist] %></p>
+      	<!-- <p>Posted by: <%#= @picture_owner %></p> -->
       	<ul class="inline-list">
       		<li><%= link_to "Edit", edit_picture_path(@picture) %></li>
           <li><%= link_to "Delete", @picture, :confirm => "Are you sure you want to delete this picture?", :method => :delete %></li>     	
