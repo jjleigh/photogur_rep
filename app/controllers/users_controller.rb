@@ -35,7 +35,6 @@ class UsersController < ApplicationController
 
     if current_user
       @my_pictures = @user.pictures
-      @picture = @user.pictures.build
     end
   end
 
