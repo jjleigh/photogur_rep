@@ -1,17 +1,16 @@
 class PicturesController < ApplicationController
 	before_filter :ensure_logged_in, :except => [:show, :index]
-	
-  def search
-    @pictures = Picture.search(params[:search])
-  end
-
 
   def index
-    @pictures = Picture.all
+     @pictures = Picture.search(params[:search])
+
+    if @pictures.size.zero?
+      flash[:notice] = "No results found"
+      @pictures = Picture.all       
+    end
     # @pictures = Picture.most_recent_nine
     # @Pictures = Picture.created_before(1.month.ago).count
     # @Pictures = Picture.created_before(1.week.ago)
-    # end
 	end
 
 	def show
