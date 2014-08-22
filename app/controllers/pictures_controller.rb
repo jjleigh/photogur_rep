@@ -5,7 +5,9 @@ class PicturesController < ApplicationController
      @pictures = Picture.search(params[:search])
 
     if @pictures.size.zero?
-      flash[:notice] = "No results found"
+      # :notice => "No results found"
+        flash.now[:alert] = "No results found"
+      # redirect_to pictures_url, :notice => "No results found"
       @pictures = Picture.all       
     end
     # @pictures = Picture.most_recent_nine
