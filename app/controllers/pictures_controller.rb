@@ -1,19 +1,23 @@
 class PicturesController < ApplicationController
 	before_filter :ensure_logged_in, :except => [:show, :index]
 	
-  def index
+  def search
     @pictures = Picture.search(params[:search])
-		filtering_params(params).each do |key, value|
-      # @pictures = @pictures.public_send(key, value) if value.present?
+  end
+
+
+  def index
+    @pictures = Picture.all
     # @pictures = Picture.most_recent_nine
     # @Pictures = Picture.created_before(1.month.ago).count
     # @Pictures = Picture.created_before(1.week.ago)
-    end
+    # end
 	end
 
 	def show
 		# should display one picture
 		@picture = Picture.find(params[:id])
+    # @picture_owner = @picture.user.name  returns the name of the user who posted the image
 
     if current_user
       @comment = @picture.comments.build
@@ -27,6 +31,7 @@ class PicturesController < ApplicationController
   def create 
   	@picture = Picture.create(picture_params)
     @picture.user_id = current_user.id
+
   	if @picture.save
   		redirect_to pictures_url
   	else
@@ -57,11 +62,6 @@ class PicturesController < ApplicationController
   private 
   def picture_params
   	params.require(:picture).permit(:artist, :title, :url)
-  end
-
-  def filtering_params(params)
-    params.slice(:newest_first, :most_recent_nine, :created_before)
-    
   end
 
 end
