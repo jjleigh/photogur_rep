@@ -62,12 +62,15 @@
       </section>
     </nav>
   </div>
-    <% if flash[:notice] %>
-      <p id="notice"><%= flash[:notice] %></p>
-    <% end %>
-    <% if flash[:alert] %>
-      <p id="alert"><%= flash[:alert] %></p>
-    <% end %>
+
+  <div class="row">
+    <div class="large-8 large-centered columns">
+      
+       <%= render 'layouts/messages' %>
+    </div>
+  </div>  
+
+
 
     <%= yield %>
     <%# if current_user %>
