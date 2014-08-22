@@ -1,27 +1,49 @@
+  <div class="row">      
+    <div class="large-12 columns">
+
+<!-- This handles the side panel -->
+      <div class="large-4 columns">
+          
+        <div class="panel user-panel">  
+          <div class="row">
+            <div class="large-12 large-centered columns">
+                <img src="http://placekitten.com/g/400/500" class="user-image">
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 large-centerd columns">
+              <h4 class='text-center user-side-head'><%= current_user.name%></h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <ul class="side-nav text-center">
+                <li><a href="#">New profile Image</a></li>
+                <li><%= link_to "New Photogur", "/pictures/new" %></li>
+                <li><a href="#">Edit account</a></li>
+              </ul>
+            </div>
+          </div>
+            
+        </div>
+
+      </div>
 
 
-  <div class="row">    
-    
-      
-    <div class="large-8 push-4 columns">
+<!-- This is the code to disply the header -->
+      <div class="large-8 columns">
 
-      <div class="row">
+       <div class="row">
         <div class="large-12">
           <h3 class="text-center user-head">Your pictures</h3>
         </div>
       </div>
-        
-      <div class="row">
-      
-        <div class="large-12 columns">
-      
 
-          <div class="panel user-images-panel">
+<!-- This is the code to display the pictures -->
+        <div class="row">
+          <div class="large-12">
 
-
-
-          
-
+            <div class="panel user-images-panel">
               <% @my_pictures.each do |picture| %>
                 <div class="row">
                   <div class="large-4 small-6 columns cs-style-3">
@@ -40,122 +62,13 @@
                   </div>
                 </div>
               <% end %>
-
-
-
-            <!-- all pictures on the first row -->
-<!--             <div class="row">
-          
-              <div class="large-4 small-6 columns">
-                <div class="your-photogur-images  blur-img">
-                  <img src="http://placehold.it/1000x1000&text=Thumbnail">
-                </div>
-              </div>
-
-              <div class="large-4 small-6 columns">
-                <div class="your-photogur-images  blur-img">
-                  <img src="http://placehold.it/1000x1000&text=Thumbnail">
-                </div>
-              </div>
-
-              <div class="large-4 small-6 columns">
-                <div class="your-photogur-images  blur-img">
-                  <img src="http://placehold.it/1000x1000&text=Thumbnail">
-                </div>
-              </div>
-
-            </div> -->
-
-
-
-<!-- all pictures on second row -->
-   <!--          <div class="row">
-          
-              <div class="large-4 small-6 columns">
-                <div class="your-photogur-images  blur-img">
-                  <img src="http://placehold.it/1000x1000&text=Thumbnail">
-                </div>
-              </div>
-
-              <div class="large-4 small-6 columns">
-                <div class="your-photogur-images  blur-img">
-                  <img src="http://placehold.it/1000x1000&text=Thumbnail">
-                </div>
-              </div>
-
-              <div class="large-4 small-6 columns">
-                <div class="your-photogur-images  blur-img">
-                  <img src="http://placehold.it/1000x1000&text=Thumbnail">
-                </div>
-              </div>
-
-            </div> -->
-
-<!-- all pictures on third row -->
-
-     <!--        <div class="row">
-          
-              <div class="large-4 small-6 columns">
-                <div class="your-photogur-images  blur-img">
-                  <img src="http://placehold.it/1000x1000&text=Thumbnail">
-                </div>
-              </div>
-
-              <div class="large-4 small-6 columns">
-                <div class="your-photogur-images  blur-img">
-                  <img src="http://placehold.it/1000x1000&text=Thumbnail">
-                </div>
-              </div>
-
-              <div class="large-4 small-6 columns">
-                <div class="your-photogur-images  blur-img">
-                  <img src="http://placehold.it/1000x1000&text=Thumbnail">
-                </div>
-              </div>
-
-            </div> -->
-
-
+            </div>
           </div>
-    
         </div>
+
+
       </div>
 
-
-    </div>
-    
-     
-     <!-- This handles the side panel -->
-    <div class="large-4 pull-8 columns">
-      
-      <div class="panel user-panel">  
-        <div class="row">
-          <div class="large-12 large-centered columns">
-              <img src="http://placekitten.com/g/400/500" class="user-image">
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 large-centerd columns">
-            <h4 class='text-center user-side-head'><%= current_user.name%></h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <ul class="side-nav text-center">
-              <li><a href="#">New profile Image</a></li>
-              <li><%= link_to "New Photogur", "/pictures/new" %></li>
-              <li><a href="#">Edit account</a></li>
-            </ul>
-          </div>
-        </div>
-        
-      </div>
-
-    </div>
-
-
-
-    
-  
-   
-   
+<!-- outer most divs -->
+  </div>
+</div>  
