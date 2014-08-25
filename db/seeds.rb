@@ -73,38 +73,38 @@ Picture.create!(
 # this will seed the databse wth categories
 	Category.create! (
 			:name  => "Landscape"
-			:cat_image_url => ""
+			:cat_image_url => "http://media-cache-ak0.pinimg.com/736x/18/e2/8d/18e28d26c7e8a8171031858d6bd7483f.jpg"
 		)
 
 	Category.create! (
 			:name  => "Portrait"
-			:cat_image_url => ""
+			:cat_image_url => "http://media-cache-ec0.pinimg.com/736x/45/a5/cd/45a5cd1e80de521e4523fbd719149b26.jpg"
 		)
 	Category.create! (
 			:name  => "Meme"
-			:cat_image_url => ""
+			:cat_image_url => "http://media-cache-ak0.pinimg.com/736x/2a/ba/0f/2aba0fe91c30b5360445f6145cee8034.jpg"
 		)
 	Category.create! (
 			:name  => "Still-life"
-			:cat_image_url => ""
+			:cat_image_url => "http://media-cache-ec0.pinimg.com/736x/c0/58/de/c058de4b27b0474f73067d302d440f47.jpg"
 		)
 	Category.create! (
 			:name  => "Food"
-			:cat_image_url => ""
+			:cat_image_url => "http://media-cache-ak0.pinimg.com/736x/79/b8/46/79b84603fbde25e6f6870858f4d55a20.jpg"
 		)
 	Category.create! (
 			:name  => "Animals"
-			:cat_image_url => ""
+			:cat_image_url => "http://media-cache-ak0.pinimg.com/736x/c6/46/09/c646092f07706d214a1fd68368944fee.jpg"
 		)
 	Category.create! (
 			:name  => "Fashion"
-			:cat_image_url => ""
+			:cat_image_url => "http://media-cache-ak0.pinimg.com/736x/25/c7/2d/25c72daff204ea3bcc8741375898131d.jpg"
 		)
 	Category.create! (
 			:name  => "Vintage"
-			:cat_image_url => ""
+			:cat_image_url => "http://media-cache-ak0.pinimg.com/736x/f7/f2/be/f7f2bec42cc8b509789e4426dd7167d2.jpg"
 		)
 	Category.create! (
 			:name  => "Graphics"
-			:cat_image_url => ""
+			:cat_image_url => "http://media-cache-ak0.pinimg.com/736x/d6/16/bb/d616bb6d1aa489f667c1f546eaa92db9.jpg"
 		)
