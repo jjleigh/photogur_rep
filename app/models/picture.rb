@@ -8,6 +8,12 @@ class Picture < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :category
 
+
+	validates :artist, presence: true
+	validates :title, presence: true
+	validates :url, presence: true
+	validates :category_id, presence: true
+
 	def self.search(search)
 
 		if search
