@@ -1,3 +1,48 @@
-// Place all the styles related to the categories controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+	
+
+.gallery-item:hover .img-title {
+    opacity: 1;
+}
+
+.gallery-item {
+	overflow: hidden;
+}
+
+.category-image {
+	max-width: 100%;
+	width: 300px;
+	height: 193px ;
+	display: block;
+	position: relative;
+	
+}
+
+.img-title {
+    /*position: absolute;*/
+    top: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    /*opacity: 0;*/
+    display: none; /* comment this out for CSS hover */
+    background-color: black;
+    /*transition: all 0.5s ease;*/
+}
+
+.img-title h5 {
+    position: absolute;
+    color: orange !important;
+    font-size: 20px;
+    font-family: arial;
+    top: 33%;
+    width: 100%;
+    text-align: center;
+}
+
+.img-title:hover {
+	color: orange !important;
+}
+
+
+
