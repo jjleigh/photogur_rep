@@ -6,5 +6,9 @@ $(document).ready( function() {
     }, function() {
         $(this).find('.img-title').fadeOut(100);
     });
+
+    // $('.gallery-item').click( function() {
+    // 		$(this).find('.img-title')
+    // })
 	
 });

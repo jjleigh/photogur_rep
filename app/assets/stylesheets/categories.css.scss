@@ -32,12 +32,16 @@
 
 .img-title h5 {
     position: absolute;
-    color: orange !important;
-    font-size: 20px;
-    font-family: arial;
+    font-size: 17px;
+    font-family: Nobile;
     top: 33%;
     width: 100%;
     text-align: center;
+}
+
+.img-title  h5 > a {
+	 color: orange !important;
+	 display: block;
 }
 
 .img-title:hover {
