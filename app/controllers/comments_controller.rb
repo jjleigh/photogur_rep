@@ -33,7 +33,7 @@ class CommentsController < ApplicationController
     if @comment.update_attributes(comment_params)
       redirect_to
     else
-      render 'edit'
+      render :edit
     end
   end
 
