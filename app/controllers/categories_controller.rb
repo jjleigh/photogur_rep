@@ -1,18 +1,10 @@
 class CategoriesController < ApplicationController
 
+
 	def show
 		@categories = Category.all
 		@Category = Category.find(params[:id])
-		@category_of_pictures = @category.pictures
-		
+		@pictures_in_a_category = @category.pictures	
 	end
 
-
-	def new
-		@category = Category.new
-	end
-
-	def create
-		if @category.save
-	end
 end
