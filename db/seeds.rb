@@ -73,29 +73,38 @@ Picture.create!(
 # this will seed the databse wth categories
 	Category.create! (
 			:name  => "Landscape"
+			:cat_image_url => ""
 		)
 
 	Category.create! (
 			:name  => "Portrait"
+			:cat_image_url => ""
 		)
 	Category.create! (
 			:name  => "Meme"
+			:cat_image_url => ""
 		)
 	Category.create! (
 			:name  => "Still-life"
+			:cat_image_url => ""
 		)
 	Category.create! (
 			:name  => "Food"
+			:cat_image_url => ""
 		)
 	Category.create! (
 			:name  => "Animals"
+			:cat_image_url => ""
 		)
 	Category.create! (
 			:name  => "Fashion"
+			:cat_image_url => ""
 		)
 	Category.create! (
 			:name  => "Vintage"
+			:cat_image_url => ""
 		)
 	Category.create! (
 			:name  => "Graphics"
+			:cat_image_url => ""
 		)
