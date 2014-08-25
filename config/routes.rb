@@ -1,4 +1,5 @@
 Photogur::Application.routes.draw do
+  root :to => "pictures#index"
 
   get "log_out" => "sessions#destroy", :as => "log_out"
 
@@ -7,12 +8,12 @@ Photogur::Application.routes.draw do
   end 
 
   resources :pictures do
-
     resources :comments, :only => [:show, :new, :create, :destroy, :edit, :update]
   end
-  root :to => "pictures#index"
+  
 
-  resources :sessions#, :only => [:new, :create, :destroy]
+  resources :sessions
+  resources :categories
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
