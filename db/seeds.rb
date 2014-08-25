@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+# this seeds the database with pictures
 Picture.create!(
 	:title  => "The old church on the coast of White sea",
     :artist => "Sergey Ershov",
@@ -64,3 +66,36 @@ Picture.create!(
     :artist => "Shaba Ranks",
     :url    => "http://media-cache-ak0.pinimg.com/736x/6c/28/81/6c2881cc336885876758a755cd918dde.jpg"
 	)
+
+
+
+
+# this will seed the databse wth categories
+	Category.create! (
+			:name  => "Landscape"
+		)
+
+	Category.create! (
+			:name  => "Portrait"
+		)
+	Category.create! (
+			:name  => "Meme"
+		)
+	Category.create! (
+			:name  => "Still-life"
+		)
+	Category.create! (
+			:name  => "Food"
+		)
+	Category.create! (
+			:name  => "Animals"
+		)
+	Category.create! (
+			:name  => "Fashion"
+		)
+	Category.create! (
+			:name  => "Vintage"
+		)
+	Category.create! (
+			:name  => "Graphics"
+		)
