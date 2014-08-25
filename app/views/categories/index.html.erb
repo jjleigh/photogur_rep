@@ -15,15 +15,14 @@
       <div class="panel index-panel">
         <div class="row">
           <% @categories.each do |category| %>
-             <div class="large-4 small-6 columns clearfix">
-              <figure>
-                <div class="blur-img">
-                  <%= link_to image_tag(category.cat_image_url), category_path(category), :class => 'index-image' %>
+             <div class="large-4 small-6 columns">
+              <figure class="gallery-item">
+                <div class="blur-cat-img">
+                  <%= link_to image_tag(category.cat_image_url), category_path(category), :class => 'category-image' %>
                 </div>
                 
-                <figcaption>
-                    <h5><%= category.name %></h5>
-
+                <figcaption class=" img-title">
+                    <h5><%= link_to category.name, category_path(category)%></h5>
                 </figcaption>
               </figure>
           </div>
