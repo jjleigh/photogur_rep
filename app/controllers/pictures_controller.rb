@@ -1,5 +1,6 @@
 class PicturesController < ApplicationController
 	before_filter :ensure_logged_in, :except => [:show, :index]
+   # before_filter :load_category
 
   def index
      @pictures = Picture.search(params[:search])
@@ -19,7 +20,7 @@ class PicturesController < ApplicationController
 		# should display one picture
 		@picture = Picture.find(params[:id])
     # @picture_owner = @picture.user.name  returns the name of the user who posted the image
-
+    # @cat_name = @category.name
     if current_user
       @comment = @picture.comments.build
     end
@@ -62,8 +63,12 @@ class PicturesController < ApplicationController
 
   private 
   def picture_params
-  	params.require(:picture).permit(:artist, :title, :url)
+  	params.require(:picture).permit(:artist, :title, :url, :category_id, :user_id)
   end
+  #   def load_category
+  #   @category = Category.find(params[:category_id])
+  # end
+
 
 end
 
