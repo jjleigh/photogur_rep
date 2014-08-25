@@ -1,0 +1,26 @@
+ <div class="row">
+    	<div class="large-12 small-centered columns">
+				<h1 class="text-center index-head">Categories</h1>
+
+    	</div>
+    </div>
+
+
+  <!-- Here the pictures begin -->
+  <div class="row">
+      
+    <div class="large-12 columns">
+      
+
+      <div class="panel index-panel">
+        <div class="row">
+          <% @categories.each do |category| %>
+            <ul class="small-block-grid-3">
+              <li><%= link_to category.name, category_path(@category)  %></li>
+            </ul>
+          <% end %>
+        </div>
+      </div>
+    
+    </div>
+  </div>
