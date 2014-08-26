@@ -56,7 +56,7 @@
 										<% if comment.user != nil %>
 											<p id='commenter'><strong><%= comment.user.name %></strong></p>
 											<p><em><%= comment.created_at %></em></p>
-											<p><%= link_to "Delete", :method => :delete %></p>
+											<p><%= link_to "Delete", [comment.picture, comment], :method => :delete %></p>
 										<% end %>
 									</div>	
 								</div>
