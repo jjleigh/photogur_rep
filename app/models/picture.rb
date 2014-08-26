@@ -17,7 +17,8 @@ class Picture < ActiveRecord::Base
 	def self.search(search)
 
 		if search
-			@pictures = Picture.where('lower(title) = ? OR lower(artist) = ?', search.downcase, search.downcase)
+			@pictures = Picture.joins(:category).where('lower(title) = ? OR lower(artist) = ? OR lower(name) = ?', search.downcase, search.downcase, search.downcase)
+			# ost.joins(:accounts).where("posts.attribute = ? or accounts.attribute = ?", search_term)
 		else
 			@pictures = Picture.all
 		end
