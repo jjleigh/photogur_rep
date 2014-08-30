@@ -110,14 +110,15 @@
 				        			</ul>
 			      				</div>
 			    				<% end %>
-
-						    	<div class="field">
-					      		<%= f.label :comment, :id => 'comment-label' %><br />
-					      		<%= f.text_area :description %>
-					    		</div>
-					    		<div class="actions">
-					      		<%= f.submit 'post', :class => 'button save-button' %>
-					    		</div>
+									<div class="picture-comment-form">
+							    	<div class="field">
+						      		<%= f.label :comment, :id => 'comment-label' %><br />
+						      		<%= f.text_area :description %>
+						    		</div>
+						    		<div class="actions">
+						      		<%= f.submit 'post', :class => 'button save-button' %>
+						    		</div>
+									</div>
 			  				<% end %>
 			  			</div>
 		    		</div>
