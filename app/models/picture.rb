@@ -1,6 +1,6 @@
 class Picture < ActiveRecord::Base
 	default_scope { order("created_at DESC")}
-	scope :most_recent_nive, -> { newest_first.limit(9)}
+	scope :most_recent_nine, -> { newest_first.limit(9)}
 	scope :created_before, ->(time) { where("created_at < ?", time)}
 
 	has_many :users, :through => :comments
