@@ -1,36 +1,45 @@
 
 <div class="row">
-	<div class="large-6 medium-centered columns">
-		<div class="new-edit-form">
-			<h1 class="text-center user-head">Add a picture</h1>
-			<hr>
+	<div class="large-7 large-centered columns">
+		<div class="form-containers">
+
+			<div class="form-header-container">
+      	<div class= "large-12 columns form-header">
+					<h1 class="text-center user-head">Add a picture</h1>
+				</div>
+			</div>
 		
-			<%= form_for @picture do |f|%>
 
-				<p>
-					<%= f.label :artist %><br>
-					<%= f.text_field :artist %>
-				</p>
+			<div class="large-8 medium-centered columns">
+	      <div class="site-forms">
+					<%= form_for @picture do |f|%>
 
-				<p>
-					<%= f.label :title %><br>
-					<%= f.text_field :title %>
-				</p>
+						<p>
+							<%= f.label :artist %><br>
+							<%= f.text_field :artist, :placeholder => "Artist's name..." %>
+						</p>
 
-				<p>
-					<%= f.label :url %><br>
-					<%= f.text_field :url %>
-				</p>
+						<p>
+							<%= f.label :title %><br>
+							<%= f.text_field :title, :placeholder => "Picture title..." %>
+						</p>
 
-				<p>
-					<%= f.label :category %><br>
-					<%= f.select(:category_id, [['Landscape', 1],['Portrait', 2],['Meme', 3],['Still-life', 4],['Food', 5],['Animals', 6], ['Fashion', 7], ['Vintage',8], ['Graphics',9]])%>
-				</p>
+						<p>
+							<%= f.label :url %><br>
+							<%= f.text_field :url, :placeholder => "Image url..." %>
+						</p>
 
-				<p>
-					<%= f.submit "save", :class => 'button' %>
-				</p>
-			<% end %>
+						<p>
+							<%= f.label :category %><br>
+							<%= f.select(:category_id, [['Landscape', 1],['Portrait', 2],['Meme', 3],['Still-life', 4],['Food', 5],['Animals', 6], ['Fashion', 7], ['Vintage',8], ['Graphics',9]])%>
+						</p>
+
+						<p>
+							<%= f.submit "save", :class => 'button save-button' %>
+						</p>
+					<% end %>
+				</div>
+			</div>
 		</div>
 		
 	</div>
