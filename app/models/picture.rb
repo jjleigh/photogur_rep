@@ -4,7 +4,7 @@ class Picture < ActiveRecord::Base
 	scope :created_before, ->(time) { where("created_at < ?", time)}
 
 	has_many :users, :through => :comments
-	has_many :comments
+	has_many :comments, dependent: :destroy
 	belongs_to :user
 	belongs_to :category
 
