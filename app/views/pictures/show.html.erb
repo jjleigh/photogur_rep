@@ -22,8 +22,15 @@
       	<!-- <p>Posted by: <%#= @picture_owner %></p> -->
       	<p>Category: <%= @category.name %></p>
       	<ul class="inline-list">
-      		<li><%= link_to "Edit", edit_picture_path(@picture) %></li>
-          <li><%= link_to "Delete", @picture, :confirm => "Are you sure you want to delete this picture?", :method => :delete %></li>     	
+      		
+          <li>
+          	<% if current_user.id == @picture.user.id %>
+          		<li><%= link_to "", edit_picture_path(@picture), :class =>"fa fa-pencil" %></li>
+							<li><%= link_to "", @picture , :method => :delete, :class =>"fa fa-trash-o", data: {confirm: "Are you sure you want to delete your picture?"} %></li>
+						<% else %>
+							<p></p>
+						<% end %>
+					</li>     	
       	</ul>
 				 
     	</div>
@@ -56,7 +63,11 @@
 										<% if comment.user != nil %>
 											<p id='commenter'><strong><%= comment.user.name %></strong></p>
 											<p><em><%= comment.created_at %></em></p>
-											<p><%= link_to "Delete", [comment.picture, comment], :method => :delete %></p>
+											<% if current_user.id == comment.user.id || current_user.id == @picture.user.id %>
+												<p><%= link_to "", [comment.article, comment], :method => :delete, :class =>"fa fa-trash-o" %></p>
+											<% else %>
+												<p></p>
+											<% end %>
 										<% end %>
 									</div>	
 								</div>
