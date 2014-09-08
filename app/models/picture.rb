@@ -13,7 +13,7 @@ class Picture < ActiveRecord::Base
 	validates :title, presence: true
 	validates :url, presence: true
 	validates :category_id, presence: true
-
+	mount_uploader :url, AvatarUploader
 	def self.search(search)
 
 		if search
