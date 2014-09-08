@@ -38,6 +38,8 @@ gem "fog"
 gem 'aws-sdk'
 # Use carrierwave for image uploading
 gem 'carrierwave'
+
+gem 'rmagick', :require => 'RMagick'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # Use debugger
