@@ -22,15 +22,18 @@
       	<!-- <p>Posted by: <%#= @picture_owner %></p> -->
       	<p>Category: <%= @category.name %></p>
       	<ul class="inline-list">
-      		
-          <li>
-          	<% if current_user.id == @picture.user.id %>
-          		<li><%= link_to "", edit_picture_path(@picture), :class =>"fa fa-pencil" %></li>
-							<li><%= link_to "", @picture , :method => :delete, :class =>"fa fa-trash-o", data: {confirm: "Are you sure you want to delete your picture?"} %></li>
-						<% else %>
-							<p></p>
-						<% end %>
-					</li>     	
+      		<% if current_user %>
+	          <li>
+	          	<% if current_user.id == @picture.user.id %>
+	          		<li><%= link_to "", edit_picture_path(@picture), :class =>"fa fa-pencil" %></li>
+								<li><%= link_to "", @picture , :method => :delete, :class =>"fa fa-trash-o", data: {confirm: "Are you sure you want to delete your picture?"} %></li>
+							<% else %>
+								<p></p>
+							<% end %>
+						</li> 
+					<% else %>
+						<li></li> 
+					<% end %>   	
       	</ul>
 				 
     	</div>
