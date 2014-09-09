@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
- before_filter :require_login, only: [:destroy]
+ before_filter :ensure_logged_in, only: [:destroy]
 
   def new
   end
