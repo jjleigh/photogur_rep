@@ -9,20 +9,20 @@
 
 
 # this will seed the database wth categories
-	Category.create!(
-		:name => "Landscape",
-		:cat_image_url => "landscape.jpg",
-		:id => 1
-		)
 
 	Category.create!(
 		:name => "Portrait",
 		:cat_image_url => "portrait.jpg",
-		:id => 2
+		:id => 1
 		)
 	Category.create!(
 		:name => "Meme",
 		:cat_image_url => "meme.jpg",
+		:id => 2
+		)
+	Category.create!(
+		:name => "Landscape",
+		:cat_image_url => "landscape.jpg",
 		:id => 3
 		)
 	Category.create!(
