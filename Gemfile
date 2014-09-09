@@ -54,3 +54,5 @@ group :production, :staging do
 end 
 
 ruby "2.1.0"
+
+gem 'figaro'
