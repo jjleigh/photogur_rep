@@ -66,6 +66,11 @@
        -o-transition: all;
       -ms-transition: all;
           transition: all;
+
+
+   img {
+   	height: 100% ;
+   }
 }
  
 .blur-user-img:hover {
@@ -76,7 +81,7 @@
 .user-show-image {
 		max-width: 100%;
 	width: 300px;
-	height: 100% ;
+	
 	display: block;
 	position: relative;
 	
