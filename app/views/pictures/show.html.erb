@@ -61,10 +61,10 @@
 								<div class="row">
 									<div class="large-12 columns comment-info">
 										<% if comment.user != nil %>
-											<p id='commenter'><strong><%= comment.user.name %></strong></p>
-											<p><em><%= comment.created_at.strftime("%A, %B %d, %Y") %></em></p>
+											<p id='commenter'><strong><%= comment.user.name %></strong> on <em><%= comment.created_at.strftime("%A, %B %d, %Y") %></em></p>
+							
 											<% if current_user.id == comment.user.id || current_user.id == @picture.user.id %>
-												<p><%= link_to "", [comment.article, comment], :method => :delete, :class =>"fa fa-trash-o" %></p>
+												<p><%= link_to "", [comment.picture, comment], :method => :delete, :class =>"fa fa-trash-o" %></p>
 											<% else %>
 												<p></p>
 											<% end %>
