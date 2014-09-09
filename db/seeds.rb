@@ -11,47 +11,47 @@
 # this will seed the database wth categories
 	Category.create!(
 		:name => "Landscape",
-		:cat_image_url => "images/landscape.jpg",
+		:cat_image_url => "landscape.jpg",
 		:id => 1
 		)
 
 	Category.create!(
 		:name => "Portrait",
-		:cat_image_url => "images/portrait.jpg",
+		:cat_image_url => "portrait.jpg",
 		:id => 2
 		)
 	Category.create!(
 		:name => "Meme",
-		:cat_image_url => "images/meme.jpg",
+		:cat_image_url => "meme.jpg",
 		:id => 3
 		)
 	Category.create!(
 		:name => "Still-life",
-		:cat_image_url => "images/still-life.jpg",
+		:cat_image_url => "still-life.jpg",
 		:id => 4
 		)
 	Category.create!(
 		:name => "Food",
-		:cat_image_url => "images/food-photogur.jpg",
+		:cat_image_url => "food-photogur.jpg",
 		:id => 5
 		)
 	Category.create!(
 		:name => "Animals",
-		:cat_image_url => "images/animals-photogur.jpg",
+		:cat_image_url => "animals-photogur.jpg",
 		:id => 6
 		)
 	Category.create!(
 		:name => "Fashion",
-		:cat_image_url => "images/fashion-photogur.jpg",
+		:cat_image_url => "fashion-photogur.jpg",
 		:id => 7
 		)
 	Category.create!(
 		:name => "Vintage",
-		:cat_image_url => "images/vintage-photogur.jpg",
+		:cat_image_url => "vintage-photogur.jpg",
 		:id => 8
 		)
 	Category.create!(
 		:name => "Graphics",
-		:cat_image_url => "images/graphics-photogur.jpg",
+		:cat_image_url => "graphics-photogur.jpg",
 		:id => 9
 		)
