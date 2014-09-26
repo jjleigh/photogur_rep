@@ -8,7 +8,7 @@
 						<p id='commenter'><strong><%= comment.user.name %></strong> on <em><%= comment.created_at.strftime("%A, %B %d, %Y") %></em></p>
 						<%if current_user %>
 							<% if current_user.id == comment.user.id || current_user.id == @picture.user.id %>
-								<p><%= link_to "", [comment.picture, comment], :method => :delete, :class =>"fa fa-trash-o" %></p>
+								<p><%= link_to "", [comment.picture, comment], :method => :delete, :class =>"fa fa-trash-o", :remote => true %></p>
 							<% else %>
 								<p></p>
 							<% end %>

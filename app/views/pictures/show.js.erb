@@ -1,1 +1,2 @@
-$('body').append("<%= escape_javascript(render @picture) %>");
+$('#comment-list').append("<%= escape_javascript(render @picture) %>");
+$('#comment-list').remove("<%= escape_javascript(render @picture)");
