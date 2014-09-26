@@ -53,42 +53,11 @@
 					<div class="row comments-header">
 						<div class="large-12 large-centered columns">
 							<h3 class="text-center">Comments</h3>
-							<!-- <p class="text-center">Comments for <%#= @picture.title %></p> -->
 						</div>
 					</div>
-
-					<% @picture.comments.each do |comment| %>
-						<div class="row comments-container">
-							<div class="large-12 columns">
-
-								<div class="row">
-									<div class="large-12 columns comment-info">
-										<% if comment.user != nil %>
-											<p id='commenter'><strong><%= comment.user.name %></strong> on <em><%= comment.created_at.strftime("%A, %B %d, %Y") %></em></p>
-											<%if current_user %>
-												<% if current_user.id == comment.user.id || current_user.id == @picture.user.id %>
-													<p><%= link_to "", [comment.picture, comment], :method => :delete, :class =>"fa fa-trash-o" %></p>
-												<% else %>
-													<p></p>
-												<% end %>
-											<% else %>
-												<p></p>
-											<% end %>
-										<% end %>
-									</div>	
-								</div>
-
-								<div class="row comment-text">
-									<div class="large-11 columns">
-										<p><%= comment.description %></p>
-									</div>
-								</div>
-							
-
-							</div>
-						</div>
-
-					<% end %>
+					<div id='comment-list'>
+						<%= render :partial => 'comments' %>
+					</div>
 				<% end %>
 
 			<%if current_user %>
@@ -104,7 +73,7 @@
 
 						<div class="row">
 							<div class="large-11 columns new-comment-input">
-								<%= form_for ([@picture, @comment]) do |f| %>
+								<%= form_for ([@picture, @comment]), :id => 'comment-form', :remote => true do |f| %>
 									<% if @comment.errors.any? %>
 										<div id="error_explanation">
 											<h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>

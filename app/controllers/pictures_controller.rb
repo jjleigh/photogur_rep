@@ -30,6 +30,8 @@ class PicturesController < ApplicationController
     end
   end
 
+
+
   def new
   	@picture = Picture.new
   end
