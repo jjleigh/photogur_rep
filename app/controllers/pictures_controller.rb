@@ -13,6 +13,11 @@ class PicturesController < ApplicationController
     # @pictures = Picture.most_recent_nine
     # @Pictures = Picture.created_before(1.month.ago).count
     # @Pictures = Picture.created_before(1.week.ago)
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
 	end
 
 	def show
