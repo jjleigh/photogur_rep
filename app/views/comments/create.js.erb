@@ -1,2 +1,4 @@
 $('#comment-list').html("<%= escape_javascript(render(:partial => 'pictures/comments'))%>");
-$('#comment-box').val(''); // this clears the text box after the 
+$('#comment-list').find('.comment-text:last').css({"background-color":"#FFE990"}); // hightlights the new comment
+$('#comment-list').find('.comment-info:last').css({"background-color":"#FFE990"}); // hightlights the new comment
+$('#comment-box').val(''); // this clears the text box after the comment is posted
