@@ -56,3 +56,7 @@ end
 ruby "2.1.0"
 
 gem 'figaro'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+end
