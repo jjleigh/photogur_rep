@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :ensure_logged_in, :only => [:edit, :show, :update, :destroy]
+  respond_to :html, :js
 
   def new
     @user = User.new

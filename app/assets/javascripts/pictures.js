@@ -3,7 +3,7 @@ $(document).on('ready page:load', function() {
 		event.preventDefault();
 		var searchValue = $('#search').val();
 
-		$.getScript( '/pictures?search=' + searchValue);
+		$.getScript( '/pictures?search=' + searchValue, '/categories?search=' + searchValue);
 		return false;
 	});
 });

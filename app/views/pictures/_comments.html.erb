@@ -3,7 +3,7 @@
 		<div class="large-12 columns">
 
 			<div class="row">
-				<div class="large-12 columns comment-info">
+				<div class="large-12 columns comment-info com">
 					<% if comment.user != nil %>
 						<p id='commenter'><strong><%= comment.user.name %></strong> on <em><%= comment.created_at.strftime("%A, %B %d, %Y") %></em></p>
 						<%if current_user %>
@@ -19,7 +19,7 @@
 				</div>	
 			</div>
 
-			<div class="row comment-text">
+			<div class="row comment-text com">
 				<div class="large-11 columns">
 					<p><%= comment.description %></p>
 				</div>

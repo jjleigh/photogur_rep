@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+	respond_to :html, :js
 
 	def index
 		@categories = Category.all
