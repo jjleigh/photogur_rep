@@ -30,5 +30,22 @@ describe Picture do
 
 	
 	 # association tests
-	  
+
+	 it  "should have many users through comments" do
+	 	expect(build(:picture)).to respond_to(:users)
+	 end
+
+	 it  "should have many comments" do
+	 	expect(build(:picture)).to respond_to(:comments)
+	 end
+
+	 it  "should belong to a user" do
+	 	expect(build(:picture)).to respond_to(:user)
+	 end
+
+	 it "should belong to a category" do
+	 	expect(build(:picture)).to respond_to(:category)
+	 end
+
+
 end
