@@ -3,17 +3,16 @@ require "picture"
 
 
 describe Picture do
-	it 'is invalid without a url' do
-		picture = Picture.new
-		picture.should be_valid
-	end
 
-	it " is invalid without a title" do
-	end 
+	# picture = Picture.new
+	# it {should validate_presence_of :title}
 
-	it "is invalid without an artist" do
-	end
+	# it {should validate_presence_of :artist}
 
-	it "is invalid without a category_id" do
-	end 
+
+	# it {"is invalid without an artist" do}
+	# end
+
+	# it "is invalid without a category_id" do
+	# end 
 end

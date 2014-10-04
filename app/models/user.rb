@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
 	has_many :pictures, dependent: :destroy
 
-	validates_presence_of :name , :email, :password
-	
+	validates :name,  presence: true
+	validates :password, presence: true
+	validates :email, presence: true
 end
