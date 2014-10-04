@@ -1,5 +1,7 @@
 == Photogur
 
+heroku_host: photo-gur.herokuapp.com
+
 
 DESCRIPTION :
 
@@ -8,3 +10,12 @@ DESCRIPTION :
 LEARNING OBJECTIVE:
   
   The learning objective of this project was to learn how to make a rails app and to learn about the MVC model. It is a   complete project.
+  
+
+TOOLS USED:
+
+Image uploading(carrier wave)
+
+responsive framework (ZURB Foundation)
+
+Amazon s3 
