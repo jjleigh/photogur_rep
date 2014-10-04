@@ -16,18 +16,18 @@ describe User do
 
 		# email tests
 
-		# it 'is invalid without an email' do
-		# 	expect(FactoryGirl.build(:user, email: nil)).to_not be_valid
-		# end
+		it 'is invalid without an email' do
+			expect(FactoryGirl.build(:user, email: nil)).to_not be_valid
+		end
 
-		# it 'should have @' do
-		# 	expect(FactoryGirl).build(:user, email:).to include('@')
-		# end 
+		it 'should have @' do
+			expect(FactoryGirl).build(:user, email:).to include('@')
+		end 
 
-		# # password tests
-		# it 'is invalid without a password' do
-		# 	expect(FactoryGirl.build(:user, password: nil)).to_not be_valid
-		# end
+		# password tests
+		it 'is invalid without a password' do
+			expect(FactoryGirl.build(:user, password: nil)).to_not be_valid
+		end
 	
 	end
 
