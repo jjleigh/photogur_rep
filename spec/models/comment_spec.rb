@@ -8,5 +8,9 @@ describe Comment do
 			expect(comment_one).to be_valid
 		end
 	end 
+
+	it "is invalid without a description" do
+		expect(build(:comment, description: nil)).to_not be_valid
+	end
 	
 end
