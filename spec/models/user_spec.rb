@@ -33,5 +33,16 @@ describe User do
 
 	# association tests
 
+	it "should have many pictures" do 
+		expect(build(:user)).to respond_to(:pictures)
+	end
+
+	it "should have many pictures" do 
+		expect(build(:user)).to respond_to(:comments)
+	end
+
+
+	# have secure password test
+
 
 end
