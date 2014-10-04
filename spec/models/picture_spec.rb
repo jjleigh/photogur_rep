@@ -29,5 +29,6 @@ describe Picture do
 	end
 
 	
-	 
+	 # association tests
+	  
 end

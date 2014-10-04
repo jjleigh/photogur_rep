@@ -7,7 +7,7 @@ describe User do
 			user_one = build(:user)
 			expect(user_one).to be_valid
 		end 
-
+		# validation tests
 		# name tests
 
 		it 'is invalid without a name' do
@@ -30,6 +30,8 @@ describe User do
 		end
 	
 	end
+
+	# association tests
 
 
 end
